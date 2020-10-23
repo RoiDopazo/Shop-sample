@@ -32,8 +32,9 @@ const ProductsStore = () => {
   }, []);
 
   const getItemsByCategory = useCallback(async (category) => {
-    const items = await SpoonacularService.searchRecipes({ category });
-    setItems(items);
+    const data = await SpoonacularService.searchRecipes({ category });
+    console.log(JSON.stringify(data));
+    setItems(data.results);
   }, []);
 
   return {

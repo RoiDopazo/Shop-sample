@@ -12,10 +12,6 @@ const styles = StyleSheet.create({
     marginTop: 8,
     padding: 16,
   },
-  headerText: {
-    fontSize: 24,
-    fontWeight: '500',
-  },
 });
 
 export default styles;

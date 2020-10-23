@@ -1,16 +1,17 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import Container from '../../components/container/Container';
 import styles from './CartPageStyles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import formatMessage from 'format-message';
+import Typography from '../../components/typography';
 
 const CartPage = () => {
   return (
     <Container title={formatMessage('Cesta de la compra')}>
       <Icon style={styles.icon_bg} name={'cart-outline'} size={300} />
       <View style={styles.container}>
-        <Text>{formatMessage("Tu cesta está vacia")}</Text>
+        <Typography type="p2">{formatMessage('Tu cesta está vacia')}</Typography>
       </View>
     </Container>
   );
