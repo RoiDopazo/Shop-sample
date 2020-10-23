@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View } from 'react-native';
+import { View } from 'react-native';
 import Container from '../../components/container/Container';
 import styles from './CartPageStyles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';

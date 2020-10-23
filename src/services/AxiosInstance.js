@@ -19,7 +19,9 @@ AxiosInstance.interceptors.response.use(
     }
     return Promise.resolve(response);
   },
-  async (error) => {},
+  async (error) => {
+    //TODO
+  },
 );
 
 
