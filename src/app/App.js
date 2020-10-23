@@ -12,8 +12,9 @@ import theme from '../theme';
 import { Provider } from 'outstated';
 import ProductsStore from '../state/ProductsStore';
 import Router from './Router';
+import CartStore from '../state/CartStore';
 
-const store = [ProductsStore];
+const store = [ProductsStore, CartStore];
 
 const App = () => {
   return (

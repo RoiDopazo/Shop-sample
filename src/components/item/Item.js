@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Typography from '../typography';
 import styles from './ItemStyles';
 
-const Item = ({ photoUrl, name, onPress, rightAction }) => {
+const Item = ({ photoUrl, name, onPress, rightComponent }) => {
   return (
     <View style={styles.container}>
       <FastImage style={styles.image} source={{ uri: photoUrl }} resizeMode="cover"></FastImage>
@@ -21,11 +21,13 @@ const Item = ({ photoUrl, name, onPress, rightAction }) => {
         {onPress && (
           <TouchableOpacity style={styles.subtitleContainer} onPress={onPress}>
             <Icon style={styles.subtitle} name="plus" size={24} />
-            <Typography style={styles.subtitle}>{formatMessage('Añadir al carrito')}</Typography>
+            <Typography type="p3" style={styles.subtitle}>
+              {formatMessage('Añadir al carrito')}
+            </Typography>
           </TouchableOpacity>
         )}
       </View>
-      {rightAction && <View style={styles.actionContainer}></View>}
+      {rightComponent}
     </View>
   );
 };
@@ -34,12 +36,12 @@ Item.propTypes = {
   photoUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   onPress: PropTypes.func,
-  rightAction: PropTypes.func,
+  rightComponent: PropTypes.func,
 };
 
 Item.defaultProps = {
   onPress: undefined,
-  rightAction: undefined,
+  rightComponent: undefined,
 };
 
 export default Item;
