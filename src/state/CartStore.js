@@ -5,8 +5,8 @@ const initialState = {
   items: [],
 };
 
-const CartStore = () => {
-  const [state, setState] = useState(initialState);
+const CartStore = (initialPropStates) => {
+  const [state, setState] = useState(initialPropStates || initialState);
 
   const addItem = (item) => {
     setState((baseState) =>
